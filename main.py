@@ -64,7 +64,8 @@ def directory_run(args) -> None:
                         index += 1
 
                     found_rules.append(Result(name=rule, found=found_line, line=index))
-            if "wordpress" in args.__dict__:
+            if args.wordpress:
+
                 for rule, bad_word in bad_functions_wp.items():
                     c_bad_word = re.compile(bad_word)
                     match = c_bad_word.search(file_.content)
@@ -131,7 +132,7 @@ def zip_run(args) -> None:
                         index+=1
 
                     found_rules.append(Result(name=rule, found=found_line, line=index))
-            if "wordpress" in args.__dict__:
+            if args.wordpress:
                 for rule, bad_word in bad_functions_wp.items():
                     c_bad_word = re.compile(bad_word)
                     match = c_bad_word.search(file_.content)
@@ -162,6 +163,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description='Process some integers.')
     parser.add_argument('--zip', '-z', type=str, help='Zip file', required=False)
     parser.add_argument('--directory', '-d', type=str, help='Directory', required=False)
+    parser.add_argument('--wordpress', '-w', type=bool, help='Wordpress', required=False)
     args = parser.parse_args()
     if not args.zip and not args.directory:
         print(Fore.RED + "Please specify a zip file or a directory" + Style.RESET_ALL)
