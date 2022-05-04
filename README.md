@@ -1,4 +1,4 @@
-# Scan PHP files for possible atacks
+# Scan PHP files for possible attacks
 How clean is the software you download? Have you ever wondered? Most of the time, developers can use these codes.
 This software scans files with .php extension in folder or zip file. It warns you of potentially dangerous software codes.
 
