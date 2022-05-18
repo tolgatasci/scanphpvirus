@@ -143,4 +143,4 @@ class Main(Tk):
         print(Fore.GREEN + "Total files: " + Style.RESET_ALL + str(total_files))
         print(Fore.RED + "Total found risk: " + Style.RESET_ALL + str(found_danger))
         self.total_search.config(text='Total Searched Files : {}'.format(total_files))
-        self.total_found.config(text='Total found code : {}'.format(found_danger))
+        self.total_found.config(text='Total found files : {}'.format(found_danger))
