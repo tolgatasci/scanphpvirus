@@ -10,3 +10,9 @@ This software scans files with .php extension in folder or zip file. It warns yo
     main.py -z file.zip -w true
     # -w --wordpress for wordpress attacks scan
 
+UI mode
+
+    python builder_exe.py
+
+
+![Scan virus ui](https://github.com/tolgatasci/scanphpvirus/blob/master/phpfiles/php-scan-ui.png?raw=true)
